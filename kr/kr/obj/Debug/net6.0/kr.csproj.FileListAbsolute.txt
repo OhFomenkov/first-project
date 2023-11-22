@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\labC#\kr\kr\bin\Debug\net6.0\kr.exe
+C:\Users\user\Desktop\labC#\kr\kr\bin\Debug\net6.0\kr.deps.json
+C:\Users\user\Desktop\labC#\kr\kr\bin\Debug\net6.0\kr.runtimeconfig.json
+C:\Users\user\Desktop\labC#\kr\kr\bin\Debug\net6.0\kr.dll
+C:\Users\user\Desktop\labC#\kr\kr\bin\Debug\net6.0\kr.pdb
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.AssemblyInfo.cs
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.dll
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\refint\kr.dll
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.pdb
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\kr.genruntimeconfig.cache
+C:\Users\user\Desktop\labC#\kr\kr\obj\Debug\net6.0\ref\kr.dll
