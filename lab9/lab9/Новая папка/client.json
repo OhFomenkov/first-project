@@ -1,0 +1,20 @@
+﻿[
+    {
+        "Name": "John Doe",
+        "CreditCardNumber": "1234567890",
+        "Days": 5,
+        "Room": "Standard"
+    },
+    {
+        "Name": "Jane Smith",
+        "CreditCardNumber": "0987654321",
+        "Days": 3,
+        "Room": "Luxe"
+    },
+    {
+        "Name": "Alice Johnson",
+        "CreditCardNumber": "5678901234",
+        "Days": 7,
+        "Room": "President"
+    }
+]
