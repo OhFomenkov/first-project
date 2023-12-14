@@ -29,7 +29,7 @@ namespace lab9.Новая_папка
         {
             DateTime dt = new DateTime(2023, 12, 11);
             hotel.CheckOut(client);
-            sw.Write($"Выселение: {client.Name}. Дата и Время: {dt.AddDays(client.Days)} \nСчёт : {client.account * (1 - client.Discount / 100)}, Скидка: {client.Discount}%\n");
+            sw.Write($"Выселение: {client.Name}. Дата и Время: {dt.AddDays(client.Days)} \nСчёт : {client.account * (1 - client.Discount / 100)}$, Скидка: {client.Discount}%\n");
         }
 
 

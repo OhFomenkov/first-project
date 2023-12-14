@@ -9,8 +9,6 @@ namespace lab9.Новая_папка
         public List<string> service = new List<string>();
         private List<Client> clients = new List<Client>();
         private List<Client> booking = new List<Client>();
-        private List<string> checkInLog = new List<string>();
-        private List<string> checkOutLog = new List<string>();
 
         public Hotel() { }
         public Hotel(string name)
@@ -21,7 +19,16 @@ namespace lab9.Новая_папка
         // Метод для бронирования номера в гостинице
         public void BookRoom(Client client)
         {
-            booking.Add(client);
+            if (!booking.Contains(client) && !clients.Contains(client)) 
+            {
+                booking.Add(client);
+                Console.WriteLine($"Номер забронирован на имя {client.Name}");
+            }
+            else
+            {
+                Console.WriteLine($"У {client.Name} уже забронирован номер");
+            }
+
         }
 
         // Метод для заселения клиента в гостиницу
@@ -31,13 +38,11 @@ namespace lab9.Новая_папка
             {
                 booking.Remove(client);
                 clients.Add(client);
-                string logEntry = $"Заселение: {client.Name} - {DateTime.Now}";
-                checkInLog.Add(logEntry);
-                Console.WriteLine(logEntry);
+                Console.WriteLine($"{client.Name} был заселён в {Name}");
             }
             else
             {
-                new ArgumentException("Клиент не проживает в гостинице");
+                Console.WriteLine($"{client.Name} не забронировал номер в {Name}");
             }
             GetDiscount(client);
         }
@@ -48,9 +53,6 @@ namespace lab9.Новая_папка
             if (clients.Contains(client))
             {
                 clients.Remove(client);
-                string logEntry = $"Выселение: {client.Name} - {DateTime.Now}. Cчёт: {client.account}";
-                checkOutLog.Add(logEntry);
-                Console.WriteLine(logEntry);
             }
             else
             {

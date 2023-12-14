@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\labC#\trening\trening\bin\Debug\net6.0\trening.exe
+C:\Users\user\Desktop\labC#\trening\trening\bin\Debug\net6.0\trening.deps.json
+C:\Users\user\Desktop\labC#\trening\trening\bin\Debug\net6.0\trening.runtimeconfig.json
+C:\Users\user\Desktop\labC#\trening\trening\bin\Debug\net6.0\trening.dll
+C:\Users\user\Desktop\labC#\trening\trening\bin\Debug\net6.0\trening.pdb
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.AssemblyInfo.cs
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.dll
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\refint\trening.dll
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.pdb
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\trening.genruntimeconfig.cache
+C:\Users\user\Desktop\labC#\trening\trening\obj\Debug\net6.0\ref\trening.dll
