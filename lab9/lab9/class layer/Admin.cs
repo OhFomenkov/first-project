@@ -3,7 +3,7 @@
 
 namespace lab9.Новая_папка
 {
-    public class Admin 
+    public class Admin
     {
         StreamWriter sw;
         Hotel hotel;

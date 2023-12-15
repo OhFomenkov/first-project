@@ -58,7 +58,7 @@ namespace lab9.Новая_папка
                         break;
                 }
                 string jsonq = JsonConvert.SerializeObject(clients);
-                File.WriteAllText("C:\\Users\\user\\Desktop\\labC#\\lab9\\lab9\\Новая папка\\Client.json", jsonq);
+                File.WriteAllText("C:\\Users\\user\\Desktop\\labC#\\lab9\\client.json", jsonq);
             }
         }
 
@@ -97,7 +97,7 @@ namespace lab9.Новая_папка
                 cards.Add(new_card);
 
                 string json = JsonConvert.SerializeObject(cards);
-                File.WriteAllText("C:\\Users\\user\\Desktop\\labC#\\lab9\\lab9\\Новая папка\\Cards.json", json);
+                File.WriteAllText("C:\\Users\\user\\Desktop\\labC#\\lab9\\Cards.json", json);
 
             }
             if(f == 2)
@@ -108,16 +108,16 @@ namespace lab9.Новая_папка
             }
 
             string jsonq = JsonConvert.SerializeObject(clients);
-            File.WriteAllText("C:\\Users\\user\\Desktop\\labC#\\lab9\\lab9\\Новая папка\\Client.json", jsonq);
+            File.WriteAllText("C:\\Users\\user\\Desktop\\labC#\\lab9\\client.json", jsonq);
 
         }
 
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             StreamWriter sw = new StreamWriter("C:\\Users\\user\\Desktop\\журнал.txt");
-            List<CreditCardClient> cards = CreditCardClient.LoadClientsCardsFromJson("C:\\Users\\user\\Desktop\\labC#\\lab9\\lab9\\Новая папка\\Cards.json");
-            List<Client> clients = Client.LoadClientsFromJson("C:\\Users\\user\\Desktop\\labC#\\lab9\\lab9\\Новая папка\\client.json");
+            List<CreditCardClient> cards = CreditCardClient.LoadClientsCardsFromJson("C:\\Users\\user\\Desktop\\labC#\\lab9\\Cards.json");
+            List<Client> clients = Client.LoadClientsFromJson("C:\\Users\\user\\Desktop\\labC#\\lab9\\client.json");
             
             Hotel RichmondBeach = new Hotel("RichmondBeach");
             
@@ -139,6 +139,7 @@ namespace lab9.Новая_папка
                     Console.WriteLine("Некорректный формат входных данных");
                     break;
             }
+            sw.Close();
         }
     }
 }
