@@ -297,6 +297,7 @@ namespace lab10_file
                     Queue<string> consonant = new Queue<string>();
                     while ((q = reader.ReadLine()) != null)
                     {
+                        q.ToLower();
                         string[] args = Regex.Split(q, @"\W+");
                         foreach (string item in args)
                         {
@@ -390,13 +391,24 @@ namespace lab10_file
             StreamWriter wr = new StreamWriter("C:\\Users\\user\\Desktop\\labC#\\lab10\\lab10\\ex3\\ex3out.txt");
             SortedDictionary<string, (int, SortedSet<int>)> dict = new SortedDictionary<string, (int, SortedSet<int>)>();
             string line;
+            Console.WriteLine("Введите кол-во строк на странице");
+            int str = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("С какой страницей работаем?");
+            int q = Convert.ToInt32(Console.ReadLine());
             int row = 0;
-            while ((line = sr.ReadLine()) != null)
+            for(int i = 0; i<q; i++)
+            {
+                for(int j = 0; j< str; j++)
+                {
+                    sr.ReadLine();
+                }
+            }
+            int count = 0;
+            while ((line = sr.ReadLine()) != null || count != 5)
             {
                 row++;
                 line = line.ToLower();
                 string[] words = Regex.Split(line, @"\W+");
-                Dictionary<int, List<int>> d = new Dictionary<int, List<int>>();
                 foreach (string word in words)
                 {
                     if (dict.Count == 0)

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace lab10
 {
-    public  class Employee
+    public  struct Employee
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string lastname { get; set; }
-        public string sex { get; set; }
-        public int age { get; set; }
-        public double zp { get; set; }
+        public string Name;
+        public string Surname;
+        public string lastname;
+        public string sex;
+        public int age;
+        public double zp; 
     }
 }

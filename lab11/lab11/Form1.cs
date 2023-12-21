@@ -255,9 +255,22 @@ namespace lab11
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            Controls.Clear();
-            InitializeComponent();
-            MessageBox.Show("Форма очищена");
+            DialogResult result = MessageBox.Show("Вы действительно хотите очистить форму?","Подтверждение", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                Controls.Clear();
+                InitializeComponent();
+                MessageBox.Show("Форма очищена");
+            }
+            else
+            {
+                
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

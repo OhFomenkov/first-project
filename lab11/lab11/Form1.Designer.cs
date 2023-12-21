@@ -69,6 +69,7 @@
             this.CV = new System.Windows.Forms.RichTextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -232,7 +233,7 @@
             this.textBoxemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxemail.Location = new System.Drawing.Point(269, 244);
             this.textBoxemail.Name = "textBoxemail";
-            this.textBoxemail.Size = new System.Drawing.Size(261, 26);
+            this.textBoxemail.Size = new System.Drawing.Size(339, 26);
             this.textBoxemail.TabIndex = 11;
             this.textBoxemail.TextChanged += new System.EventHandler(this.textBoxemail_TextChanged);
             // 
@@ -249,7 +250,7 @@
             "Могилёвская область"});
             this.comboBoxAdres.Location = new System.Drawing.Point(269, 208);
             this.comboBoxAdres.Name = "comboBoxAdres";
-            this.comboBoxAdres.Size = new System.Drawing.Size(261, 24);
+            this.comboBoxAdres.Size = new System.Drawing.Size(339, 24);
             this.comboBoxAdres.TabIndex = 12;
             this.comboBoxAdres.SelectedIndexChanged += new System.EventHandler(this.comboBoxAdres_SelectedIndexChanged);
             // 
@@ -626,7 +627,7 @@
             this.buttonSave.BackColor = System.Drawing.Color.Green;
             this.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(396, 768);
+            this.buttonSave.Location = new System.Drawing.Point(282, 768);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(170, 35);
             this.buttonSave.TabIndex = 20;
@@ -639,7 +640,7 @@
             this.buttonClear.BackColor = System.Drawing.Color.White;
             this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClear.ForeColor = System.Drawing.Color.Black;
-            this.buttonClear.Location = new System.Drawing.Point(588, 768);
+            this.buttonClear.Location = new System.Drawing.Point(476, 768);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(145, 35);
             this.buttonClear.TabIndex = 21;
@@ -647,12 +648,26 @@
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(627, 768);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 35);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Отмена";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(775, 803);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.CV);
@@ -735,6 +750,7 @@
         private System.Windows.Forms.RichTextBox CV;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button button1;
     }
 }
 
