@@ -388,32 +388,25 @@ namespace lab10_file
         private static void ex3()
         {
             StreamReader sr = new StreamReader("C:\\Users\\user\\Desktop\\labC#\\lab10\\lab10\\ex3\\ex3.txt");
+            StreamReader sr_counter = new StreamReader("C:\\Users\\user\\Desktop\\labC#\\lab10\\lab10\\ex3\\ex3.txt");
             StreamWriter wr = new StreamWriter("C:\\Users\\user\\Desktop\\labC#\\lab10\\lab10\\ex3\\ex3out.txt");
-            SortedDictionary<string, (int, SortedSet<int>)> dict = new SortedDictionary<string, (int, SortedSet<int>)>();
             string line;
             Console.WriteLine("Введите кол-во строк на странице");
             int str = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("С какой страницей работаем?");
-            int q = Convert.ToInt32(Console.ReadLine());
-            int row = 0;
-            for(int i = 0; i<q; i++)
-            {
-                for(int j = 0; j< str; j++)
-                {
-                    sr.ReadLine();
-                }
-            }
             int count = 0;
-            while ((line = sr.ReadLine()) != null || count != 5)
+            string a;
+            SortedDictionary<string, (int, SortedSet<int>)> dict = new SortedDictionary<string, (int, SortedSet<int>)>();
+            sr_counter.Close();
+            while ((line = sr.ReadLine()) != null)
             {
-                row++;
+                count++;
                 line = line.ToLower();
                 string[] words = Regex.Split(line, @"\W+");
                 foreach (string word in words)
                 {
                     if (dict.Count == 0)
                     {
-                        dict.Add(word, (1, new SortedSet<int>() { row }));
+                        dict.Add(word, (1, new SortedSet<int>() { count % str == 0 ? count/str : count/str + 1}));
                     }
                     else
                     {
@@ -422,15 +415,14 @@ namespace lab10_file
                         {
                             (int, SortedSet<int>) tp = dict[word];
                             tp.Item1++;
-                            tp.Item2.Add(row);
+                            tp.Item2.Add(count % str == 0 ? count / str : count / str + 1);
                             dict[word] = tp;
                         }
                         else
                         {
-                            dict.Add(word, (1, new SortedSet<int>() { row }));
+                            dict.Add(word, (1, new SortedSet<int>() { count % str == 0 ? count / str : count / str + 1 }));
                         }
                     }
-
                 }
             }
             List<char> chars = new List<char>();
@@ -450,6 +442,7 @@ namespace lab10_file
                 }
                 wr.WriteLine();
             }
+
 
             wr.Close();
             sr.Close();

@@ -20,6 +20,11 @@ namespace lab11
         public Form1()
         {
             InitializeComponent();
+            labelDriverCAtegory.Hide();
+            CategoryA.Hide();
+            CategoryB.Hide();
+            CategoryC.Hide();
+            CategoryD.Hide();
         }
 
         private void textBoxsurname_TextChanged(object sender, EventArgs e)
@@ -142,12 +147,18 @@ namespace lab11
 
         private void listBoxMinzp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            user.minzp = Convert.ToInt32(listBoxMinzp.Text);
+            if (listBoxMinzp.SelectedItem != null)
+            {
+                user.minzp = Convert.ToInt32(listBoxMinzp.GetItemText(listBoxMinzp.SelectedItem));
+            }
         }
 
         private void listBoxMaxZP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            user.maxzp = Convert.ToInt32(listBoxMaxZP.Text);
+            if (listBoxMaxZP.SelectedItem != null)
+            {
+                user.maxzp = Convert.ToInt32(listBoxMaxZP.GetItemText(listBoxMaxZP.SelectedItem));
+            }
         }
         
 
@@ -181,7 +192,7 @@ namespace lab11
                 {
                     using (StreamWriter sw = new StreamWriter("C:\\Users\\user\\Desktop\\labC#\\lab11\\lab11\\user.txt"))
                     {
-                        sw.WriteLine("\t\t\tДанные сотрудника");
+                        sw.WriteLine("\t\t\tДанные о сотруднике");
                         sw.WriteLine($"Фамилия Имя отчество: {user.surname} {user.name} {user.lastname}");
                         sw.WriteLine($"Пол: {user.sex}");
                         sw.WriteLine($"Дата рождения: {user.Birthday}");
@@ -216,17 +227,14 @@ namespace lab11
 
             try
             {
-                // Normalize the domain
                 email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
-                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+                RegexOptions.None, TimeSpan.FromMilliseconds(200));
 
-                // Examines the domain part of the email and normalizes it.
+                
                 string DomainMapper(Match match)
                 {
-                    // Use IdnMapping class to convert Unicode domain names.
                     var idn = new IdnMapping();
 
-                    // Pull out and process domain name (throws ArgumentException on invalid)
                     string domainName = idn.GetAscii(match.Groups[2].Value);
 
                     return match.Groups[1].Value + domainName;
@@ -262,15 +270,31 @@ namespace lab11
                 InitializeComponent();
                 MessageBox.Show("Форма очищена");
             }
-            else
-            {
-                
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void checkBoxDriverLic_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDriverLic.Checked)
+            {
+                labelDriverCAtegory.Show();
+                CategoryA.Show();
+                CategoryB.Show();
+                CategoryC.Show();
+                CategoryD.Show();
+            }
+            else
+            {
+                labelDriverCAtegory.Hide();
+                CategoryA.Hide();
+                CategoryB.Hide();
+                CategoryC.Hide();
+                CategoryD.Hide();
+            }
         }
     }
 }

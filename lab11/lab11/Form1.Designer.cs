@@ -460,6 +460,7 @@
             this.checkBoxDriverLic.TabIndex = 1;
             this.checkBoxDriverLic.Text = "Водительское удостоверение";
             this.checkBoxDriverLic.UseVisualStyleBackColor = true;
+            this.checkBoxDriverLic.CheckedChanged += new System.EventHandler(this.checkBoxDriverLic_CheckedChanged);
             // 
             // checkBoxCar
             // 
